@@ -1,0 +1,20 @@
+
+> cdrp-frontend@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.3.3
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.4:3000
+   - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 1617ms
+ ○ Compiling / ...
+ ✓ Compiled / in 1714ms (1563 modules)
+ GET / 200 in 2363ms
+ ✓ Compiled /favicon.ico in 470ms (855 modules)
+ GET /favicon.ico 200 in 550ms
+   Reload env: .env.local
+ ✓ Compiled in 763ms (1563 modules)
+ ✓ Compiled in 511ms (724 modules)
+[?25h

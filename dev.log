@@ -1,0 +1,37 @@
+
+> cdrp-frontend@0.1.0 dev
+> next dev
+
+ ⚠ Port 3000 is in use, using available port 3001 instead.
+   ▲ Next.js 15.3.3
+   - Local:        http://localhost:3001
+   - Network:      http://172.16.126.184:3001
+   - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 11.1s
+ ○ Compiling / ...
+ ✓ Compiled / in 9.4s (844 modules)
+ HEAD / 200 in 9716ms
+ GET / 200 in 179ms
+ ✓ Compiled /favicon.ico in 268ms (484 modules)
+ GET /favicon.ico 200 in 344ms
+ ✓ Compiled /requests in 352ms (868 modules)
+ GET /requests 200 in 429ms
+ GET /requests 200 in 12ms
+ ○ Compiling /map ...
+ ✓ Compiled /map in 813ms (896 modules)
+ GET /map 200 in 877ms
+ GET /requests 200 in 28ms
+ ✓ Compiled /analytics in 308ms (893 modules)
+ GET /analytics 200 in 372ms
+ ✓ Compiled /admin in 371ms (904 modules)
+ GET /admin 200 in 410ms
+ ✓ Compiled /_not-found in 425ms (892 modules)
+ GET /dashboard 404 in 519ms
+ GET /dashboard 404 in 67ms
+ ✓ Compiled in 566ms (395 modules)
+[Error: Cannot apply unknown utility class `border-border`. Are you using CSS modules or similar and missing `@reference`? https://tailwindcss.com/docs/functions-and-directives#reference-directive]
+ ✓ Compiled in 440ms (895 modules)
+ ✓ Compiled in 2s (1661 modules)
+[?25h
