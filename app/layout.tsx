@@ -32,12 +32,17 @@ export default function RootLayout({
         {children}
         <ConnectionStatus />
         <Toaster 
-          position="top-right"
+          position="bottom-right"
           toastOptions={{
             duration: 4000,
             style: {
               background: '#363636',
               color: '#fff',
+              borderRadius: '12px',
+              fontSize: '14px',
+              padding: '12px 16px',
+              maxWidth: '320px',
+              wordBreak: 'break-word',
             },
             success: {
               style: {
@@ -50,6 +55,11 @@ export default function RootLayout({
               },
             },
           }}
+          containerStyle={{
+            bottom: 20,
+            right: 20,
+            left: 'auto',
+          } as React.CSSProperties}
         />
       </body>
     </html>

@@ -140,7 +140,7 @@ export default function Home() {
       <Header user={mockUser} />
       
       {/* Hero Section */}
-      <div className="md:ml-52 pt-8 pb-8 px-6">
+      <div className="md:ml-52 pt-20 md:pt-8 pb-8 px-4 md:px-6">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -150,20 +150,20 @@ export default function Home() {
           >
             {/* Hero Logo and Title */}
             <div className="flex flex-col items-center mb-3">
-              <div className="flex items-center gap-6 mb-4">
+              <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6 mb-4">
                 <div className="relative">
                   <img 
                     src="/cdrp-logo.png" 
                     alt="CDRP - Crisis Data Response Platform"
-                    className="w-48 h-48 rounded-3xl shadow-2xl"
+                    className="w-32 h-32 md:w-48 md:h-48 rounded-2xl md:rounded-3xl shadow-2xl"
                   />
                 </div>
                 
-                <div className="text-left">
-                  <h1 className="text-4xl md:text-6xl font-bold mb-2 font-inter">
+                <div className="text-center md:text-left">
+                  <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold mb-2 font-inter">
                     <span className="text-gradient">CDRP</span>
                   </h1>
-                  <h2 className="text-sm md:text-base font-mono font-semibold text-white/60 tracking-[0.2em] uppercase">
+                  <h2 className="text-xs md:text-sm lg:text-base font-mono font-semibold text-white/60 tracking-[0.15em] md:tracking-[0.2em] uppercase">
                     CRISIS DATA RESPONSE PLATFORM
                   </h2>
                 </div>
@@ -185,11 +185,11 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
-            className="mt-12"
+            className="mt-8 md:mt-12"
           >
-            <div className="glass rounded-2xl border border-white/5 p-8">
-              <div className="text-center mb-8">
-                <h3 className="text-xl font-bold text-foreground mb-2">
+            <div className="glass rounded-2xl border border-white/5 p-4 md:p-8">
+              <div className="text-center mb-6 md:mb-8">
+                <h3 className="text-lg md:text-xl font-bold text-foreground mb-2">
                   Powered by Real-Time Data
                 </h3>
                 <p className="text-muted-foreground text-sm mb-4">
@@ -203,83 +203,53 @@ export default function Home() {
                 </Link>
               </div>
               
-              <div className="grid grid-cols-3 md:grid-cols-6 gap-6 items-center justify-items-center">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 items-center justify-items-center">
                 {/* NASA */}
                 <div className="group text-center">
-                  <img 
-                    src="https://img.logo.dev/nasa.gov?token=pk_VAZ6tvAVQHCDwKeaNRVyjQ"
-                    alt="NASA"
-                    className="h-8 mx-auto filter brightness-0 invert opacity-60 group-hover:opacity-100 transition-all"
-                    onError={(e) => {
-                      e.currentTarget.src = 'https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg';
-                    }}
-                  />
-                  <p className="text-xs text-muted-foreground mt-2 opacity-70">Satellite</p>
+                  <div className="w-12 h-12 mx-auto mb-2 glass border border-white/10 rounded-xl flex items-center justify-center group-hover:border-blue-400/50 transition-all">
+                    <Radio className="h-6 w-6 text-white/60 group-hover:text-blue-400 transition-colors" />
+                  </div>
+                  <p className="text-xs text-muted-foreground opacity-70">NASA Satellite</p>
                 </div>
 
                 {/* USGS */}
                 <div className="group text-center">
-                  <img 
-                    src="https://img.logo.dev/usgs.gov?token=pk_VAZ6tvAVQHCDwKeaNRVyjQ"
-                    alt="USGS"
-                    className="h-8 mx-auto filter brightness-0 invert opacity-60 group-hover:opacity-100 transition-all"
-                    onError={(e) => {
-                      e.currentTarget.src = 'https://upload.wikimedia.org/wikipedia/commons/1/1c/USGS_logo_green.svg';
-                    }}
-                  />
-                  <p className="text-xs text-muted-foreground mt-2 opacity-70">Earthquakes</p>
+                  <div className="w-12 h-12 mx-auto mb-2 glass border border-white/10 rounded-xl flex items-center justify-center group-hover:border-orange-400/50 transition-all">
+                    <Globe className="h-6 w-6 text-white/60 group-hover:text-orange-400 transition-colors" />
+                  </div>
+                  <p className="text-xs text-muted-foreground opacity-70">USGS Earthquakes</p>
                 </div>
 
                 {/* NOAA */}
                 <div className="group text-center">
-                  <img 
-                    src="https://img.logo.dev/noaa.gov?token=pk_VAZ6tvAVQHCDwKeaNRVyjQ"
-                    alt="NOAA"
-                    className="h-8 mx-auto filter brightness-0 invert opacity-60 group-hover:opacity-100 transition-all"
-                    onError={(e) => {
-                      e.currentTarget.src = 'https://upload.wikimedia.org/wikipedia/commons/7/79/NOAA_logo.svg';
-                    }}
-                  />
-                  <p className="text-xs text-muted-foreground mt-2 opacity-70">Weather</p>
+                  <div className="w-12 h-12 mx-auto mb-2 glass border border-white/10 rounded-xl flex items-center justify-center group-hover:border-green-400/50 transition-all">
+                    <Activity className="h-6 w-6 text-white/60 group-hover:text-green-400 transition-colors" />
+                  </div>
+                  <p className="text-xs text-muted-foreground opacity-70">NOAA Weather</p>
                 </div>
 
                 {/* NWS */}
                 <div className="group text-center">
-                  <img 
-                    src="https://img.logo.dev/weather.gov?token=pk_VAZ6tvAVQHCDwKeaNRVyjQ"
-                    alt="National Weather Service"
-                    className="h-8 mx-auto filter brightness-0 invert opacity-60 group-hover:opacity-100 transition-all"
-                    onError={(e) => {
-                      e.currentTarget.src = 'https://upload.wikimedia.org/wikipedia/commons/6/65/US-NationalWeatherService-Logo.svg';
-                    }}
-                  />
-                  <p className="text-xs text-muted-foreground mt-2 opacity-70">Weather</p>
+                  <div className="w-12 h-12 mx-auto mb-2 glass border border-white/10 rounded-xl flex items-center justify-center group-hover:border-sky-400/50 transition-all">
+                    <Zap className="h-6 w-6 text-white/60 group-hover:text-sky-400 transition-colors" />
+                  </div>
+                  <p className="text-xs text-muted-foreground opacity-70">Weather Service</p>
                 </div>
 
                 {/* CDC */}
                 <div className="group text-center">
-                  <img 
-                    src="https://img.logo.dev/cdc.gov?token=pk_VAZ6tvAVQHCDwKeaNRVyjQ"
-                    alt="CDC"
-                    className="h-8 mx-auto filter brightness-0 invert opacity-60 group-hover:opacity-100 transition-all"
-                    onError={(e) => {
-                      e.currentTarget.src = 'https://upload.wikimedia.org/wikipedia/commons/8/87/US_CDC_logo.svg';
-                    }}
-                  />
-                  <p className="text-xs text-muted-foreground mt-2 opacity-70">Health</p>
+                  <div className="w-12 h-12 mx-auto mb-2 glass border border-white/10 rounded-xl flex items-center justify-center group-hover:border-purple-400/50 transition-all">
+                    <Heart className="h-6 w-6 text-white/60 group-hover:text-purple-400 transition-colors" />
+                  </div>
+                  <p className="text-xs text-muted-foreground opacity-70">CDC Health</p>
                 </div>
 
                 {/* FEMA */}
                 <div className="group text-center">
-                  <img 
-                    src="https://img.logo.dev/fema.gov?token=pk_VAZ6tvAVQHCDwKeaNRVyjQ"
-                    alt="FEMA"
-                    className="h-8 mx-auto filter brightness-0 invert opacity-60 group-hover:opacity-100 transition-all"
-                    onError={(e) => {
-                      e.currentTarget.src = 'https://upload.wikimedia.org/wikipedia/commons/4/49/Seal_of_the_Federal_Emergency_Management_Agency.svg';
-                    }}
-                  />
-                  <p className="text-xs text-muted-foreground mt-2 opacity-70">Emergency</p>
+                  <div className="w-12 h-12 mx-auto mb-2 glass border border-white/10 rounded-xl flex items-center justify-center group-hover:border-red-400/50 transition-all">
+                    <Shield className="h-6 w-6 text-white/60 group-hover:text-red-400 transition-colors" />
+                  </div>
+                  <p className="text-xs text-muted-foreground opacity-70">FEMA Emergency</p>
                 </div>
               </div>
             </div>
